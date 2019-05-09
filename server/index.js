@@ -4,8 +4,6 @@ const choose_ctrl = require('./controllers/choose_controller')
 
 app.use(express.json())
 
-const express = require('express')
-const app = express()
 //Endpoints
 app.get('/api/ideas', choose_ctrl.getAllIdeas)
 app.get('/api/idea/:id', choose_ctrl.getIdeaById)
