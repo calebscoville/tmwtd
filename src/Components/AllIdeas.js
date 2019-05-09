@@ -10,7 +10,7 @@ class AllIdeas extends Component {
     }
 
     componentDidMount(){
-        axios.get('/api/ideas').then((res) => {
+        axios.get('/api/ideas').then((res) => { //LINKS!! to the server on index.js
             this.setState({
                 ideas: res.data
             })

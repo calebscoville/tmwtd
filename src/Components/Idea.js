@@ -27,21 +27,40 @@ class Idea extends Component {
     render() {
         return (
             <div>
-                <h1>Idea By ID</h1>
+            <div>
+                <h1>Type your name please</h1>
+                <input onChange={this.handleUpdateId} />
+                <button onClick={this.handleGetIdeaById}>Submit</button>
+                {this.state.selectedIdea ?
+                    <div>
+                        <h3>{this.state.selectedIdea.name}</h3>
+                        <p>Cost: {this.state.selectedIdea.cost}</p>
+                    </div>
+                    :
+                    <div>Thank you for your name. You are kind and nice.</div>
+                }
+            </div>
+
+            <div>
+                <h1>Gimme Ideas</h1>
                 <input onChange={this.handleUpdateId} />
                 <button onClick={this.handleGetIdeaById}>Find Idea</button>
-                {/* not sure if below is right */}
-            {this.state.selectedIdea ?
-            <div>
-                <h3>{this.state.selectedIdea.name}</h3>
-                <p>Cost: {this.state.selectedIdea.cost}</p>
+                {this.state.selectedIdea ?
+                    <div>
+                        <h3>{this.state.selectedIdea.name}</h3>
+                        <p>Cost: {this.state.selectedIdea.cost}</p>
+                    </div>
+                    :
+                    <div>Please Select Idea ID</div>
+                }
             </div>
-            :
-            <div>Please Select Idea ID</div>
-            }
-            </div>
-                )
-            }
-        }
-        
+        </div>
+        )
+
+    }
+
+
+
+}
+
 export default Idea

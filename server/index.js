@@ -5,7 +5,7 @@ const choose_ctrl = require('./controllers/choose_controller')
 app.use(express.json())
 
 //Endpoints
-app.get('/api/ideas', choose_ctrl.getAllIdeas)
+app.get('/api/ideas', choose_ctrl.getAllIdeas) //LINK!! links to component
 app.get('/api/idea/:id', choose_ctrl.getIdeaById)
 app.post('/api/addIdea', choose_ctrl.addIdea)
 

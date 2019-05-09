@@ -2,6 +2,10 @@ let ideas = [
     { name: 'Feed the Ducks', cost: 1 },
     { name: 'Paper Boats in a Stream', cost: 1 },
     { name: 'Draw Pictures of Cats', cost: 0 },
+    { name: 'Have a picnic', cost: 3 },
+    { name: 'Go on a hike', cost: 0 },
+    { name: 'Get ice cream and play cards', cost: 1 },
+    
 ]
 
 module.exports = {
