@@ -11,7 +11,7 @@ class Idea extends Component {
     }
 
     handleGetIdeaById = () => {
-        axios.get(`/api/idea/${this.state.selectedID}`).then((res) =>{
+        axios.get(`/api/idea/${this.state.selectedID}`).then((res) => {
             this.setState({
                 selectedEvent: res.data
             })
@@ -28,19 +28,20 @@ class Idea extends Component {
         return (
             <div>
                 <h1>Idea By ID</h1>
-                <input onChange={this.handleUpdateId}/>
+                <input onChange={this.handleUpdateId} />
                 <button onClick={this.handleGetIdeaById}>Find Idea</button>
-            {/* not sure if below is right */}
-            {this.state.selectedIdea} 
+                {/* not sure if below is right */}
+            {this.state.selectedIdea ?
+            <div>
+                <h3>{this.state.selectedIdea.name}</h3>
+                <p>Cost: {this.state.selectedIdea.cost}</p>
             </div>
-            <h3>{this.state.selectedIdea.name}</h3>
-            <p>Cost: {this.state.selectedEvent.cost}</p>
-        <div>
             :
             <div>Please Select Idea ID</div>
-        </div>
-        )
-    }
-}
-
+            }
+            </div>
+                )
+            }
+        }
+        
 export default Idea
