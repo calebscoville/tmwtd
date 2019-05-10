@@ -1,27 +1,33 @@
 .App {
   display:flex;
   justify-content: center;
-  background: rgb(166, 157, 204);
+  background: rgb(85, 23, 85);
   flex-direction: column;
+  color: white;
+  text-align: center;
+  letter-spacing: 2px;
+  font-family: georgia;
+  font-style: bold;
 }
 
 .header {
-  background: yellow;
+  background: rgb(218, 119, 119);
   height: 105px;
   width: 100%;
   margin: 5px;
   padding: 5px;
+  font-size: 18px;
 }
 
 .content {
   display: flex;
   justify-content: center;
-  background: black;
+  background: rgb(68, 68, 180);
   flex-direction: row;
 }
 
 .ideas {
-  background: white;
+  background: rgb(230, 168, 53);
   height: 700px;
   width: 415px;
   margin: 5px;
@@ -29,14 +35,14 @@
 }
 
 .list {
-  background: gray;
+  background: rgb(223, 223, 73);
   height: 700px;
   width: 415px;
   margin: 5px;
 }
 
 .todo {
-  background: rgb(187, 105, 105);
+  background: rgb(125, 170, 56);
   height: 700px;
   width: 415px;
   margin: 5px;

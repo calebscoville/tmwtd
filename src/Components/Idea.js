@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import AllIdeas from './AllIdeas'
 
 class Idea extends Component {
     constructor() {
@@ -20,6 +21,14 @@ class Idea extends Component {
         })
     }
 
+    // addIdea=(idea) => {
+    //     Axios.post('/api/addIdea', {idea: idea}).then((response) => {
+    //       this.setState({
+    //         ideas: response.data
+    //       })
+    //     })
+    //   }
+
     handleGetIdeaById = () => {
         axios.get(`/api/idea/${this.state.selectedID}`).then((res) => {
             this.setState({
@@ -35,6 +44,7 @@ class Idea extends Component {
     }
 
     render() {
+        console.log(this.state.ideas)
         return (
             <div>
             <div>
@@ -55,7 +65,7 @@ class Idea extends Component {
                 <h1>Gimme Ideas</h1>
                 {/* <input onChange={this.handleUpdateId} /> */}
                 {/* <button onClick={this.handleGetIdeaById}>Find Idea</button> */}
-                <button onClick={() => {this.props.showIdeas=true; console.log(this.props.showIdeas)}}>Gimme Ideas</button>
+                <button onClick={this.handleGetIdeas}>Gimme Ideas</button>
                 {this.state.selectedIdea ?
                     <div>
                         <h3>{this.state.selectedIdea.name}</h3>
@@ -64,6 +74,9 @@ class Idea extends Component {
                     :
                     <div>Please Select Idea ID</div>
                 }
+            </div>
+            <div>
+                <AllIdeas ideas={this.state.ideas} />
             </div>
         </div>
         )

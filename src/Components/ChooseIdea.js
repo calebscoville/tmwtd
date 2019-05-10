@@ -30,19 +30,19 @@ class ChooseIdea extends Component {
     render() {
         return (
             <div>
-                <h1>Choose Idea</h1>
+                <h1>Tell me what to do already!</h1>
                 <form onSubmit={this.handleAddIdea}>
-                <input
+                {/* <input
                     placeholder='Idea Name'
                     name='ideaName'
                     onChange={this.handleUpdateInput}
-                />
+                /> */}
                 {/* <input
                     placeholder='Cost'
                     name='cost'
                     onChange={this.handleUpdateInput}
                     /> */}
-                    <button>Add Event</button>
+                    <button>PUSH THIS BUTTON</button>
                 </form>
             </div>
         )

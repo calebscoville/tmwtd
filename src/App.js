@@ -7,30 +7,7 @@ import ChooseIdea from './Components/ChooseIdea'
 // import AddIdeas from './Components/AddIdea'
 
 class App extends Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      ideas: [],
-      showIdeas: false
-    }
-  }
-
-  componentDidMount(){
-    Axios.get('/api/ideas').then((res) => { //LINKS!! to the server on index.js
-        this.setState({
-            ideas: res.data
-        })
-    })
-}
-
-addIdea=(idea) => {
-  Axios.post('/api/addIdea', {idea: idea}).then((response) => {
-    this.setState({
-      ideas: response.data
-    })
-  })
-}
-
+  
   render() {
     return (
       <div className="App">
@@ -41,8 +18,7 @@ addIdea=(idea) => {
         </div>
       </header>
       <section className="content">
-        <div className="ideas"><Idea showIdeas={this.state.showIdeas} ideas={this.state.ideas}  /></div>
-        <div className="list"><AllIdeas showIdeas={this.state.showIdeas} ideas={this.state.ideas}  /></div>
+        <div className="ideas"><Idea /></div>
         <div className="todo"><ChooseIdea /></div>
       </section>
        

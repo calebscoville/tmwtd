@@ -21,11 +21,11 @@ class AllIdeas extends Component {
     
 
     render(){
-        const ideas = this.state.ideas.map((idea) => {
+        const ideas = this.props.ideas.map((idea) => {
             return (
                 <div>
-                    <li key={idea.id}>{idea.name}</li>
-                    <h3>{idea.name}</h3>
+                    {/* <li key={idea.id}>{idea.name}</li> */}
+                    <h3 key={idea.id}>{idea.name}</h3>
                     
                 </div>
             )
@@ -34,7 +34,7 @@ class AllIdeas extends Component {
         return (
             <div>
                 <h1>All Ideas</h1>
-                {/* <ul>{ideas}</ul> */}
+                <ul>{ideas}</ul>
             </div>
         )
     }
