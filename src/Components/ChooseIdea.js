@@ -6,7 +6,7 @@ class ChooseIdea extends Component {
         super()
         this.state = {
             ideaName: '',
-            cost: null
+            // cost: null
         }
     }
 
@@ -20,7 +20,7 @@ class ChooseIdea extends Component {
         e.preventDefault()
         axios.post('/api/ChooseIdea', {
             name: this.state.ideaName,
-            cost: this.state.cost
+            // cost: this.state.cost
         })
         .then((res) => {
             console.log(res)
@@ -37,11 +37,11 @@ class ChooseIdea extends Component {
                     name='ideaName'
                     onChange={this.handleUpdateInput}
                 />
-                <input
+                {/* <input
                     placeholder='Cost'
                     name='cost'
                     onChange={this.handleUpdateInput}
-                    />
+                    /> */}
                     <button>Add Event</button>
                 </form>
             </div>

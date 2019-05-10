@@ -1,10 +1,10 @@
 let ideas = [
-    { name: 'Feed the Ducks', cost: 1 },
-    { name: 'Paper Boats in a Stream', cost: 1 },
-    { name: 'Draw Pictures of Cats', cost: 0 },
-    { name: 'Have a picnic', cost: 3 },
-    { name: 'Go on a hike', cost: 0 },
-    { name: 'Get ice cream and play cards', cost: 1 },
+    { name: 'Feed the Ducks'},
+    { name: 'Paper Boats in a Stream'},
+    { name: 'Draw Pictures of Cats'},
+    { name: 'Have a picnic'},
+    { name: 'Go on a hike'},
+    { name: 'Get ice cream and play cards'},
     
 ]
 
@@ -22,7 +22,7 @@ module.exports = {
         let id = ideas[ideas.length - 1].id + 1
         const newIdea = {
             name: req.body.name,
-            cost: req.body.cost,
+            // cost: req.body.cost,
             id: id 
         }
         ideas = [...ideas, newIdea]

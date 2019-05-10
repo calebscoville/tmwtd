@@ -44,7 +44,7 @@ class Idea extends Component {
                 {this.state.selectedIdea ?
                     <div>
                         <h3>{this.state.selectedIdea.name}</h3>
-                        <p>Cost: {this.state.selectedIdea.cost}</p>
+                        {/* <p>Cost: {this.state.selectedIdea.cost}</p> */}
                     </div>
                     :
                     <div>Thank you for your name. You are kind and nice.</div>
@@ -59,7 +59,7 @@ class Idea extends Component {
                 {this.state.selectedIdea ?
                     <div>
                         <h3>{this.state.selectedIdea.name}</h3>
-                        <p>Cost: {this.state.selectedIdea.cost}</p>
+                        {/* <p>Cost: {this.state.selectedIdea.cost}</p> */}
                     </div>
                     :
                     <div>Please Select Idea ID</div>
