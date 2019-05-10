@@ -1,14 +1,14 @@
 let ideas = [
-    { name: 'Feed the Ducks'},
-    { name: 'Chase a Cheetah'},
-    { name: 'Paper Boats in a Stream'},
-    { name: 'Draw Pictures of Cats'},
-    { name: 'Build a Treehouse on an Elephant'},
-    { name: 'Have a Picnic'},
-    { name: 'Go on a Hike'},
-    { name: 'Get Ice Cream and Play Cards'},
-    { name: 'Ride a Whale'},
-    { name: 'Make a Submarine out of Grass'}
+    { name: 'Feed the Ducks', id:1},
+    { name: 'Chase a Cheetah', id: 2},
+    { name: 'Paper Boats in a Stream', id; 3},
+    { name: 'Draw Pictures of Cats', id: 4},
+    { name: 'Build a Treehouse on an Elephant', id: 5},
+    { name: 'Have a Picnic', id: 6},
+    { name: 'Go on a Hike', id: 7},
+    { name: 'Get Ice Cream and Play Cards', id: 8},
+    { name: 'Ride a Whale', id: 9},
+    { name: 'Make a Submarine out of Grass', id: 10}
     
 ]
 

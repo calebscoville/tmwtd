@@ -42,7 +42,7 @@ class ChooseIdea extends Component {
                     name='cost'
                     onChange={this.handleUpdateInput}
                     /> */}
-                    <button>PUSH THIS BUTTON</button>
+                    <button>PUSH THIS BUTTON IF YOU LIKE HAVING FUN and YOU HATE NOT HAVING FUN</button>
                 </form>
             </div>
         )
