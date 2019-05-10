@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import axios from 'axios'
 
-//notr sure if I need what's below...???
+//not sure if I need what's below...???
 // class AllIdeas extends Component {
 //     constructor(){
 //         super()
