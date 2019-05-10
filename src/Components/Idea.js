@@ -6,14 +6,24 @@ class Idea extends Component {
         super()
         this.state = {
             selectedID: null,
-            selectedIdea: null
+            selectedIdea: [],
+            ideas: []
         }
+    }
+
+    handleGetIdeas = () => {
+        axios.get('/api/ideas').then((res) => {
+            // console.log(res)
+            this.setState({
+                ideas: res.data
+            })
+        })
     }
 
     handleGetIdeaById = () => {
         axios.get(`/api/idea/${this.state.selectedID}`).then((res) => {
             this.setState({
-                selectedEvent: res.data
+                selectedIdea: res.data
             })
         })
     }
@@ -43,8 +53,9 @@ class Idea extends Component {
 
             <div>
                 <h1>Gimme Ideas</h1>
-                <input onChange={this.handleUpdateId} />
-                <button onClick={this.handleGetIdeaById}>Find Idea</button>
+                {/* <input onChange={this.handleUpdateId} /> */}
+                {/* <button onClick={this.handleGetIdeaById}>Find Idea</button> */}
+                <button onClick={this.handleGetIdeas}>Gimme Ideas</button>
                 {this.state.selectedIdea ?
                     <div>
                         <h3>{this.state.selectedIdea.name}</h3>

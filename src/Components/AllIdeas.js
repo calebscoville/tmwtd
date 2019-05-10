@@ -2,20 +2,20 @@ import React, {Component} from 'react'
 import axios from 'axios'
 
 class AllIdeas extends Component {
-    constructor(){
-        super()
-            this.state = {
-                ideas: []
-            }
-    }
+    // constructor(){
+    //     super()
+    //         this.state = {
+    //             ideas: []
+    //         }
+    // }
 
-    componentDidMount(){
-        axios.get('/api/ideas').then((res) => { //LINKS!! to the server on index.js
-            this.setState({
-                ideas: res.data
-            })
-        })
-    }
+    // componentDidMount(){
+    //     axios.get('/api/ideas').then((res) => { //LINKS!! to the server on index.js
+    //         this.setState({
+    //             ideas: res.data
+    //         })
+    //     })
+    // }
 
     render(){
         const ideas = this.state.ideas.map((idea) => {
