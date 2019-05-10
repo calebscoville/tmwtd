@@ -33,7 +33,7 @@ class AllIdeas extends Component {
         
         return (
             <div>
-                <h1>All Ideas</h1>
+                {/* <h1>All Ideas</h1> */}
                 <ul>{ideas}</ul>
             </div>
         )
