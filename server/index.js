@@ -2,6 +2,8 @@ const express = require('express')
 const app = express()
 const choose_ctrl = require('./controllers/choose_controller')
 
+console.log(choose_ctrl)
+
 app.use(express.json())
 
 //Endpoints

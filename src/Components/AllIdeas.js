@@ -18,13 +18,7 @@ class AllIdeas extends Component {
             }
     }
 
-    componentDidMount(){
-        axios.get('/api/ideas').then((res) => { //LINKS!! to the server on index.js
-            this.setState({
-                ideas: res.data
-            })
-        })
-    }
+    
 
     render(){
         const ideas = this.state.ideas.map((idea) => {
@@ -40,7 +34,7 @@ class AllIdeas extends Component {
         return (
             <div>
                 <h1>All Ideas</h1>
-                <ul>{ideas}</ul>
+                {/* <ul>{ideas}</ul> */}
             </div>
         )
     }
