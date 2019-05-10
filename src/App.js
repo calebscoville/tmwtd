@@ -6,6 +6,12 @@ import ChooseIdea from './Components/ChooseIdea'
 // import AddIdeas from './Components/AddIdea'
 
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      app: []
+    }
+  }
   render() {
     return (
       <div className="App">
