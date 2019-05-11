@@ -27,6 +27,14 @@ class ChooseIdea extends Component {
         })
     }
 
+    handleClick = () => {
+        axios.get('/api/random').then((res) => {
+            this.setState({
+                ideaName: res.data.name
+            }
+        )})
+    }
+
     render() {
         return (
             <div>
@@ -42,8 +50,9 @@ class ChooseIdea extends Component {
                     name='cost'
                     onChange={this.handleUpdateInput}
                     /> */}
-                    <button>PUSH THIS BUTTON IF YOU LIKE HAVING FUN and YOU HATE NOT HAVING FUN</button>
+                    <button onClick={this.handleClick}>PUSH THIS BUTTON IF YOU LIKE HAVING FUN and YOU HATE NOT HAVING FUN</button>
                 </form>
+                <h1>{this.state.ideaName}</h1>
             </div>
         )
     }

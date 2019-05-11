@@ -1,7 +1,7 @@
 .App {
   display:flex;
   justify-content: center;
-  background: rgb(85, 23, 85);
+  background: #bf00ff;
   flex-direction: column;
   color: white;
   text-align: center;
@@ -11,7 +11,7 @@
 }
 
 .header {
-  background: rgb(218, 119, 119);
+  background: rgb(206, 58, 58);
   height: 105px;
   width: 100%;
   margin: 5px;
@@ -22,7 +22,7 @@
 .content {
   display: flex;
   justify-content: center;
-  background: rgb(68, 68, 180);
+  background: rgb(174, 180, 68);
   flex-direction: row;
 }
 

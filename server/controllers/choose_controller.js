@@ -1,18 +1,25 @@
 let ideas = [
     { name: 'Feed the Ducks', id:1},
     { name: 'Chase a Cheetah', id: 2},
-    { name: 'Paper Boats in a Stream', id; 3},
+    { name: 'Paper Boats in a Stream', id: 3},
     { name: 'Draw Pictures of Cats', id: 4},
     { name: 'Build a Treehouse on an Elephant', id: 5},
     { name: 'Have a Picnic', id: 6},
     { name: 'Go on a Hike', id: 7},
     { name: 'Get Ice Cream and Play Cards', id: 8},
     { name: 'Ride a Whale', id: 9},
-    { name: 'Make a Submarine out of Grass', id: 10}
+    { name: 'Make a Submarine out of Grass', id: 10},
+    { name: 'Eat Bamboo for Breakfast', id: 11},
+    { name: 'Sidewalk Chalk Pictionary', id: 12},
     
 ]
 
 module.exports = {
+    getRandomIdea: (req, res) => {
+        let random=Math.floor(Math.random() * 11)
+        const idea = ideas[random]
+        res.status(200).send(idea)
+    },
     getAllIdeas: (req, res) => {
         res.status(200).send(ideas)
     },
