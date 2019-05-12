@@ -7,8 +7,11 @@ import ChooseIdea from './Components/ChooseIdea'
 // import AddIdeas from './Components/AddIdea'
 
 class App extends Component {
+
+
   
   render() {
+
     return (
       <div className="App">
       <header className="header">
@@ -18,9 +21,11 @@ class App extends Component {
         </div>
       </header>
       <section className="content">
+      
         <div className="ideas"><Idea /></div>
         <div className="todo"><ChooseIdea /></div>
       </section>
+       
        
       
       </div>

@@ -1,7 +1,7 @@
 .App {
   display:flex;
   justify-content: center;
-  background: #bf00ff;
+  background: blue;
   flex-direction: column;
   color: white;
   text-align: center;
@@ -22,7 +22,7 @@
 .content {
   display: flex;
   justify-content: center;
-  background: rgb(174, 180, 68);
+  background: yellow;
   flex-direction: row;
 }
 
