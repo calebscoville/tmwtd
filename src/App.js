@@ -8,8 +8,19 @@ import EnterIdea from './Components/EnterIdea'
 // import AddIdeas from './Components/AddIdea'
 
 class App extends Component {
-
-
+  constructor () {
+    super()
+    this.state = {
+      items: [],
+      currentItam: {text:'', key:''},
+    }
+  }
+handleInout = e => {
+  console.log('Hello Input')
+}
+addItem = () => {
+  console.log('Hello Add Item')
+}
   
   render() {
 
@@ -19,11 +30,13 @@ class App extends Component {
         <div className="logo">
           <h1>TMWTD</h1>
           <h5>Tell me what to do</h5>
+          <EnterIdea addItem={this.addItem} />
         </div>
       </header>
       <section className="content">
       
         <div className="ideas"><EnterIdea /></div>
+        <div className="App"><EnterIdea addItem={this.addItem} /></div>
         <div className="ideas"><Idea /></div>
         <div className="todo"><ChooseIdea /></div>
       </section>
