@@ -52,7 +52,7 @@ class ChooseIdea extends Component {
                     name='cost'
                     onChange={this.handleUpdateInput}
                     /> */}
-                    <button onClick={this.handleClick}>PUSH THIS BUTTON IF YOU LIKE HAVING FUN and YOU HATE NOT HAVING FUN</button>
+                    <button onClick={this.handleClick}>CLICK THIS IF YOU LIKE FUN and YOU HATE NOT HAVING FUN</button>
                 
                 <h1>{this.state.ideaName}</h1>
             </div>

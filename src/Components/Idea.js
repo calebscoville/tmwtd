@@ -66,7 +66,7 @@ class Idea extends Component {
                 {/* <h1>Gimme Ideas</h1> */}
                 {/* <input onChange={this.handleUpdateId} /> */}
                 {/* <button onClick={this.handleGetIdeaById}>Find Idea</button> */}
-                <button onClick={this.props.handleGetIdeas}>...........................Gimme Some of Those Great Ideas...........................</button>
+                <button onClick={this.props.handleGetIdeas}>...Gimme Some of Dose Great Ideas....</button>
                 {this.state.selectedIdea ?
                     <div>
                         <h3>{this.state.selectedIdea.name}</h3>

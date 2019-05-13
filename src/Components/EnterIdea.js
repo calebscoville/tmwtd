@@ -51,12 +51,12 @@ class EnterIdea extends Component {
         <div className="header">
           <form onSubmit={this.props.addItem}>
             <input 
-            placeholder="What's Your Idea?" 
+            placeholder="Your Cool Idea Here!!!!!!" 
             ref={this.props.inputElement}
             value={this.props.currentItem}
             onChange={this.handleInput}
                 />
-            <button type="submit" onClick={this.addItem}> Add Your Idea </button>
+            <button type="submit" onClick={this.addItem}> Add Yo Idea to the List </button>
           </form>
         </div>
       </div>
