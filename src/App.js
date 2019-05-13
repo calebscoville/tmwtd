@@ -4,6 +4,7 @@ import AllIdeas from './Components/AllIdeas'
 import Idea from './Components/Idea'
 import Axios from 'axios'
 import ChooseIdea from './Components/ChooseIdea'
+import EnterIdea from './Components/EnterIdea'
 // import AddIdeas from './Components/AddIdea'
 
 class App extends Component {
@@ -22,6 +23,7 @@ class App extends Component {
       </header>
       <section className="content">
       
+        <div className="ideas"><EnterIdea /></div>
         <div className="ideas"><Idea /></div>
         <div className="todo"><ChooseIdea /></div>
       </section>

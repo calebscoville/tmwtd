@@ -1,11 +1,9 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 
+
 class ChooseIdea extends Component {
 
-
-
-    
     constructor() {
         super()
         this.state = {
@@ -60,6 +58,7 @@ class ChooseIdea extends Component {
             </div>
         )
     }
+
 }
 
 export default ChooseIdea

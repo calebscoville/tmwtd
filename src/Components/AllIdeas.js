@@ -36,6 +36,11 @@ class AllIdeas extends Component {
                 <h1>AWESOME IDEAS</h1>
                 <ul>{ideas}</ul>
             </div>
+
+// experiment
+            
+//experiment
+
         )
     }
 }
