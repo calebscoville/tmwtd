@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import axios from 'axios'
+// import axios from 'axios'
 
 //not sure if I need what's below...???
 // class AllIdeas extends Component {
@@ -21,11 +21,11 @@ class AllIdeas extends Component {
     
 
     render(){
-        const ideas = this.props.ideas.map((idea) => {
+        const ideas = this.props.ideas.map((idea, i) => {
             return (
-                <div>
+                <div key={i}>
                     {/* <li key={idea.id}>{idea.name}</li> */}
-                    <h3 key={idea.id}>{idea.name}</h3>
+                    <h3>{idea.name}</h3>
                     
                 </div>
             )

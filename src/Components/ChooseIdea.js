@@ -18,16 +18,16 @@ class ChooseIdea extends Component {
         })
     }
 
-    handleAddIdea = (e) => {
-        e.preventDefault()
-        axios.post('/api/ChooseIdea', {
-            name: this.state.ideaName,
-            // cost: this.state.cost
-        })
-        .then((res) => {
-            console.log(res)
-        })
-    }
+    // handleAddIdea = (e) => {
+    //     e.preventDefault()
+    //     axios.post('/api/ChooseIdea', {
+    //         name: this.state.ideaName,
+    //         // cost: this.state.cost
+    //     })
+    //     .then((res) => {
+    //         console.log(res)
+    //     })
+    // }
 
     handleClick = () => {
         axios.get('/api/random').then((res) => {
@@ -41,7 +41,7 @@ class ChooseIdea extends Component {
         return (
             <div>
                 <h1>Tell me what to do already!</h1>
-                <form onSubmit={this.handleAddIdea}>
+                
                 {/* <input
                     placeholder='Idea Name'
                     name='ideaName'
@@ -53,7 +53,7 @@ class ChooseIdea extends Component {
                     onChange={this.handleUpdateInput}
                     /> */}
                     <button onClick={this.handleClick}>PUSH THIS BUTTON IF YOU LIKE HAVING FUN and YOU HATE NOT HAVING FUN</button>
-                </form>
+                
                 <h1>{this.state.ideaName}</h1>
             </div>
         )

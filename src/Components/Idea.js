@@ -8,18 +8,17 @@ class Idea extends Component {
         this.state = {
             selectedID: null,
             selectedIdea: [],
-            ideas: []
         }
     }
 
-    handleGetIdeas = () => {
-        axios.get('/api/ideas').then((res) => {
-            // console.log(res)
-            this.setState({
-                ideas: res.data
-            })
-        })
-    }
+    // handleGetIdeas = () => {
+    //     axios.get('/api/ideas').then((res) => {
+    //         // console.log(res)
+    //         this.setState({
+    //             ideas: res.data
+    //         })
+    //     })
+    // }
 
     // addIdea=(idea) => {
     //     Axios.post('/api/addIdea', {idea: idea}).then((response) => {
@@ -44,7 +43,7 @@ class Idea extends Component {
     }
 
     render() {
-        console.log(this.state.ideas)
+        // console.log(this.state.ideas)
         return (
             <div>
                 
@@ -66,7 +65,7 @@ class Idea extends Component {
                 {/* <h1>Gimme Ideas</h1> */}
                 {/* <input onChange={this.handleUpdateId} /> */}
                 {/* <button onClick={this.handleGetIdeaById}>Find Idea</button> */}
-                <button onClick={this.handleGetIdeas}>...........................Gimme Some of Those Great Ideas...........................</button>
+                <button onClick={this.props.handleGetIdeas}>...........................Gimme Some of Those Great Ideas...........................</button>
                 {this.state.selectedIdea ?
                     <div>
                         <h3>{this.state.selectedIdea.name}</h3>
@@ -77,7 +76,7 @@ class Idea extends Component {
                 }
             </div>
             <div>
-                <AllIdeas ideas={this.state.ideas} />
+                <AllIdeas ideas={this.props.ideas} />
             </div>
         </div>
         )

@@ -9,8 +9,8 @@ let ideas = [
     { name: 'Get Ice Cream and Play Cards', id: 8},
     { name: 'Ride a Whale', id: 9},
     { name: 'Make a Submarine out of Grass', id: 10},
-    { name: 'Eat Bamboo for Breakfast', id: 11},
-    { name: 'Sidewalk Chalk Pictionary', id: 12},
+    // { name: 'Eat Bamboo for Breakfast', id: 11},
+    // { name: 'Sidewalk Chalk Pictionary', id: 12},
     
 ]
 
@@ -31,12 +31,13 @@ module.exports = {
     },
     addIdea: (req, res) => {
         let id = ideas[ideas.length - 1].id + 1
+        console.log(req.body)
         const newIdea = {
-            name: req.body.name,
+            name: req.body.newItem,
             // cost: req.body.cost,
             id: id 
         }
         ideas = [...ideas, newIdea]
-        res.status(200).send(newEvent)
+        res.status(200).send(ideas)
     }
 }

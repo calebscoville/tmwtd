@@ -1,30 +1,45 @@
 import React, { Component } from 'react'
+import axios from 'axios'
+// import EnterItems from './Components/EnterItems'
 
 class EnterIdea extends Component {
-    componentDidUpdate() {
-        this.props.inputElement.current.focus()
+    constructor(){
+        super()
+        this.state = {
+            currentItem:''
+        }
     }
-
-
+    // componentDidUpdate() {
+    //     this.props.inputElement.current.focus()
+    // }
 
     handleInput = e => {
-        const itemText = e.target.value
-        const currentItem = { text: itemText, key: Date.now() }
+        let itemText = e.target.value
+        console.log(this.state.currentItem)
+        // let currentItem = { text: itemText, key: Date.now() }
         this.setState({
-          currentItem,
+          currentItem: itemText
         })
       }
 
       addItem = e => {
         e.preventDefault()
         const newItem = this.state.currentItem
-        if (newItem.text !== '') {
+        if (newItem !== '') {
           console.log(newItem)
-          const items = [...this.state.items, newItem]
-          this.setState({
-            items: items,
-            currentItem: { text: '', key: '' },
-          })
+          axios.post('/api/addIdea', {newItem}).then(res => {
+                this.props.handleUpdateIdeas(res.data)
+            })
+            .catch(err => {
+                console.log(err)
+            }) 
+        //   const items = [...this.state.items, newItem]
+        //   this.setState({
+        //     items: items,
+            // currentItem: { text: '', key: '' },
+        //   })
+
+
         }
       }
 
@@ -39,9 +54,9 @@ class EnterIdea extends Component {
             placeholder="What's Your Idea?" 
             ref={this.props.inputElement}
             value={this.props.currentItem}
-            onChange={this.props.handleInput}
+            onChange={this.handleInput}
                 />
-            <button type="submit"> Add Your Idea </button>
+            <button type="submit" onClick={this.addItem}> Add Your Idea </button>
           </form>
         </div>
       </div>
