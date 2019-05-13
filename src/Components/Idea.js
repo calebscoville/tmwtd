@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import AllIdeas from './AllIdeas'
+import Title from './Title'
 
 class Idea extends Component {
     constructor() {
@@ -48,7 +49,7 @@ class Idea extends Component {
             <div>
                 
             <div>
-                <h1>Type your name please</h1>
+                <Title />
                 <input onChange={this.handleUpdateId} />
                 <button onClick={this.handleGetIdeaById}>Submit</button>
                 {this.state.selectedIdea ?
