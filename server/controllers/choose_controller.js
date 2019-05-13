@@ -39,5 +39,8 @@ module.exports = {
         }
         ideas = [...ideas, newIdea]
         res.status(200).send(ideas)
+    },
+    updateIdea: (req, res) => {
+
     }
 }

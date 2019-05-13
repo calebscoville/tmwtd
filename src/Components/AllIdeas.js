@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import IdeaDisplay from './IdeaDisplay'
 // import axios from 'axios'
 
 //not sure if I need what's below...???
@@ -22,12 +23,9 @@ class AllIdeas extends Component {
 
     render(){
         const ideas = this.props.ideas.map((idea, i) => {
+            console.log(idea)
             return (
-                <div key={i}>
-                    {/* <li key={idea.id}>{idea.name}</li> */}
-                    <h3>{idea.name}</h3>
-                    
-                </div>
+                <IdeaDisplay key={idea.id} name={idea.name} />
             )
         })
         

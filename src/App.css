@@ -1,6 +1,6 @@
 .App {
   display:flex;
-  align-items: center;
+  align-items: stretch;
   background: blue;
   flex-direction: column;
   color: white;
@@ -28,7 +28,7 @@
 
 .ideas {
   background: rgb(230, 168, 53);
-  height: 700px;
+  height: 1000px;
   width: 500px;
   margin: 5px;
  
@@ -36,14 +36,14 @@
 
 .list {
   background: rgb(223, 223, 73);
-  height: 700px;
+  height: 1000px;
   width: 500px;
   margin: 5px;
 }
 
 .todo {
   background: rgb(125, 170, 56);
-  height: 700px;
+  height: 1000px;
   width: 500px;
   margin: 5px;
 }
