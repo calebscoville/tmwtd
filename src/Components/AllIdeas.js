@@ -25,7 +25,7 @@ class AllIdeas extends Component {
         const ideas = this.props.ideas.map((idea, i) => {
             console.log(idea)
             return (
-                <IdeaDisplay key={idea.id} name={idea.name} />
+                <IdeaDisplay key={idea.id} name={idea.name} handleUpdateIdeas={this.props.handleUpdateIdeas} id={idea.id} />
             )
         })
         

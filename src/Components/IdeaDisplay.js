@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Axios from 'axios';
+import axios from 'axios';
 
 class IdeaDisplay extends Component {
  constructor(){
@@ -32,8 +32,16 @@ handleUpdateIdeaText=(e) => {
 handleSubmitEdit=(text, id) => {
     axios.put(`/api/updateIdea/${id}`, {text})
     .then(res => {
-        
+        this.props.handleUpdateIdeas(res.data)
     })
+    .catch(err =>{
+        console.log(err)
+    })
+}
+
+handleBoss=() => {
+    this.handleSubmitEdit(this.state.updateIdea, this.props.id)
+    this.handleAllowEdit()
 }
 
  render(){
@@ -47,7 +55,7 @@ handleSubmitEdit=(text, id) => {
          :
          <div>
              <input onChange={this.handleUpdateIdeaText}/>
-             <button>Submit</button>
+             <button onClick={this.handleBoss}>Submit</button>
          </div>  
         } 
         </div>   

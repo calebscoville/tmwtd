@@ -76,7 +76,7 @@ class Idea extends Component {
                 }
             </div>
             <div>
-                <AllIdeas ideas={this.props.ideas} />
+                <AllIdeas ideas={this.props.ideas} handleUpdateIdeas={this.props.handleUpdateIdeas}/>
             </div>
         </div>
         )

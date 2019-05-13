@@ -41,6 +41,13 @@ module.exports = {
         res.status(200).send(ideas)
     },
     updateIdea: (req, res) => {
-
+        console.log(req.body)
+        console.log(req.params)
+        let {text}=req.body
+        let {id}=req.params
+        let updatePost=ideas.filter((idea) => {
+            
+        })
+        res.status(200)
     }
 }

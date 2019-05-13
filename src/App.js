@@ -65,7 +65,7 @@ handleUpdateIdeas = newIdeasArray => {
         </div>
       </header>
       <section className="content">  
-        <div className="ideas"><Idea ideas={this.state.ideas} handleGetIdeas={this.handleGetIdeas} /></div>
+        <div className="ideas"><Idea ideas={this.state.ideas} handleGetIdeas={this.handleGetIdeas} handleUpdateIdeas={this.handleUpdateIdeas}/></div>
         <div className="ideas"><EnterIdea ideas={this.state.ideas} handleUpdateIdeas={this.handleUpdateIdeas} /></div>
         {/* <div className="App"><EnterIdea addItem={this.addItem} /></div> */}
         <div className="todo"><ChooseIdea /></div>
