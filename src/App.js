@@ -46,9 +46,10 @@ deleteItem = key => {
       </header>
       <section className="content">
       
+        
+        <div className="ideas"><Idea /></div>
         <div className="ideas"><EnterIdea /></div>
         <div className="App"><EnterIdea addItem={this.addItem} /></div>
-        <div className="ideas"><Idea /></div>
         <div className="todo"><ChooseIdea /></div>
 
         
