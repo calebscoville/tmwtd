@@ -51,6 +51,7 @@ handleBoss=() => {
             <div>
             <h4>{this.props.name}</h4>
             <button onClick={this.handleAllowEdit}>Edit</button>
+            <button onClick={this}>Delete</button>
          </div>
          :
          <div>

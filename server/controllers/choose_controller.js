@@ -41,13 +41,26 @@ module.exports = {
         res.status(200).send(ideas)
     },
     updateIdea: (req, res) => {
-        console.log(req.body)
-        console.log(req.params)
         let {text}=req.body
         let {id}=req.params
-        let updatePost=ideas.filter((idea) => {
-            
+        let updateIndex=ideas.findIndex((idea) => {
+            return idea.id === +id
         })
-        res.status(200)
+        let newIdea={
+            id: ideas[updateIndex].id,
+            name: text || ideas[updateIndex].name
+        }
+        ideas.splice(updateIndex, 1, newIdea)
+        res.status(200).send(ideas)
+
+    },
+
+    deleteIdea: (req, res) => {
+        let {id}=req.params
+        let deleteIndex=ideas.findIndex((idea) => {
+            return idea.id === +id
+        })
+        ideas.splice(deleteIndex, 1)
+        res.status(200).send(ideas)
     }
 }
