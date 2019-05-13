@@ -56,10 +56,12 @@ module.exports = {
     },
 
     deleteIdea: (req, res) => {
-        let {id}=req.params
-        let deleteIndex=ideas.findIndex((idea) => {
+        let {id} = req.params
+        console.log(id)
+        let deleteIndex = ideas.findIndex((idea) => {
             return idea.id === +id
         })
+        console.log(deleteIndex)
         ideas.splice(deleteIndex, 1)
         res.status(200).send(ideas)
     }

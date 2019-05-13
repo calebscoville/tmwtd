@@ -44,6 +44,16 @@ handleBoss=() => {
     this.handleAllowEdit()
 }
 
+handleDelete=(id) => {
+    axios.delete(`/api/deleteIdea/${id}`)
+    .then(res => {
+        this.props.handleUpdateIdeas(res.data)
+    })
+    .catch(err =>{
+        console.log(err)
+    })
+}
+
  render(){
      return(
          <div>
@@ -51,7 +61,7 @@ handleBoss=() => {
             <div>
             <h4>{this.props.name}</h4>
             <button onClick={this.handleAllowEdit}>Edit</button>
-            <button onClick={this}>Delete</button>
+            <button onClick={() => this.handleDelete(this.props.id)}>Delete</button>
          </div>
          :
          <div>
