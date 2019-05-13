@@ -47,6 +47,7 @@ class Idea extends Component {
         console.log(this.state.ideas)
         return (
             <div>
+                
             <div>
                 <h1>Type your name please</h1>
                 <input onChange={this.handleUpdateId} />

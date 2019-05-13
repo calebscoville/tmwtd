@@ -11,11 +11,12 @@ class App extends Component {
   constructor () {
     super()
     this.state = {
-      // list: [],
+      list: [],
       items: [],
       currentItem: {text:'', key:''},
     }
   }
+  
 handleInput = e => {
   console.log('Hello Input')
 }
@@ -42,6 +43,7 @@ deleteItem = key => {
           <h1>TMWTD</h1>
           <h5>Tell me what to do</h5>
           <EnterIdea addItem={this.addItem} />
+          
         </div>
       </header>
       <section className="content">

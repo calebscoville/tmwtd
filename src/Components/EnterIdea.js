@@ -5,6 +5,8 @@ class EnterIdea extends Component {
         this.props.inputElement.current.focus()
     }
 
+
+
     handleInput = e => {
         const itemText = e.target.value
         const currentItem = { text: itemText, key: Date.now() }
