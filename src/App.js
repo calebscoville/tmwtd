@@ -11,15 +11,26 @@ class App extends Component {
   constructor () {
     super()
     this.state = {
+      // list: [],
       items: [],
-      currentItam: {text:'', key:''},
+      currentItem: {text:'', key:''},
     }
   }
-handleInout = e => {
+handleInput = e => {
   console.log('Hello Input')
 }
-addItem = () => {
-  console.log('Hello Add Item')
+addItem = e => {
+  e.preventDefault()
+  console.log('Hello World')
+}
+
+deleteItem = key => {
+  const filteredItems = this.state.items.filter(item => {
+    return item.key !== key
+  })
+  this.setState({
+    items: filteredItems,
+  })
 }
   
   render() {
@@ -39,6 +50,9 @@ addItem = () => {
         <div className="App"><EnterIdea addItem={this.addItem} /></div>
         <div className="ideas"><Idea /></div>
         <div className="todo"><ChooseIdea /></div>
+
+        
+
       </section>
        
        

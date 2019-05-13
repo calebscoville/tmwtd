@@ -40,8 +40,6 @@ class EnterIdea extends Component {
             onChange={this.props.handleInput}
                 />
             <button type="submit"> Add Your Idea </button>
-            
-            
           </form>
         </div>
       </div>
